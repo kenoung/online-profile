@@ -1,0 +1,71 @@
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html, body {
+  height: 100%;
+}
+
+.button {
+  border-radius: 100px;
+  margin: 0 1rem 1rem 1rem;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer {
+  position: absolute;
+  width: 300px;
+  margin-left: -150px;
+  left: 50%;
+  bottom: 1rem;
+  text-align: center;
+}
+
+.footer i {
+  margin-left: 1rem;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  height: 100%;
+  text-align: center;
+}
+
+.section-heading {
+  padding: 4rem 2rem;
+}
+
+/* Intro
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.description {
+  padding-top: 40%;
+}
+
+/* Work
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.work {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.datetime {
+  padding-top: 5rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.job-description {
+  padding: 4rem 7rem;
+  text-align: left;
+}
+
+.job-description h2 {
+  display: inline;
+}
+
+.workplace {
+  display: inline-block
+}
+
+/* Projects
+–––––––––––––––––––––––––––––––––––––––––––––––––– */

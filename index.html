@@ -1,3 +1,157 @@
-<html>
-<p>Hello World</p>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Modified from default Skeleton template -->
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Ken Oung Yong Quan</title>
+  <meta name="description" content="Online Resume">
+  <meta name="author" content="Ken Oung Yong Quan">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- CartoDB Dependencies
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+</head>
+<body>
+
+  <!-- Links
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="footer">
+    <h2>
+      <a href="https://github.com/kenoung" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/kenoung/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="docs/Resume_Ken_Oung.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+    </h2>
+  </div>
+
+  <!-- Introduction
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="section intro">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <div class="description">
+            <h1>Hi, I'm Ken.</h1>
+            <p>I'm a Year 2 Computer Science student from the National University
+             of Singapore (NUS).<br> Looking for a year long internship in
+              a Silicon Valley startup from Aug 2017 to July 2018.</p>
+            <a class="button button-primary" href="docs/Resume_Ken_Oung.pdf" target="_blank">Download My Resume</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Experience
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="section work">
+    <div class="container">
+      <div class="section-heading">
+        <h1>Work Experience</h1>
+      </div>
+
+      <div class="row">
+        <div class="three columns datetime">Sep 2016 - Present</div>
+        <div class="nine columns">
+          <div class="job-description">
+            <h2>Teaching Assistant</h2> <br><em>National University of Singapore (NUS)</em>
+            <p></p>
+            <ul>
+              <li>Teach classes for CS1010S Programming Methodology (Python)</li>
+              <li>Conduct weekly tutorials and grade students' work</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three columns datetime">May 2016 - July 2016</div>
+        <div class="nine columns">
+          <div class="job-description">
+            <h2>Data Science Intern</h2>  <br><em>Starhub Mobile Private Limited</em>
+            <p></p>
+            <ul>
+              <li>Website Classification</li>
+              <li>Find trending threads on local forum</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three columns datetime">Feb 2016 – Apr 2016</div>
+        <div class="nine columns">
+          <div class="job-description">
+            <h2>Student Research Assistant</h2> <br><em>NUS Centre for Behavioural Economics</em>
+            <p></p>
+            <ul>
+              <li>Analyze taxi driver status logs for patterns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Projects
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="section projects">
+    <div class="container">
+      <div class="section-heading">
+        <h1>Local Cafes Map Viz</h1>
+        <a class="button" href="https://rhynade.github.io/Dashboard/index.html">Demo</a>
+        <a class="button" href="https://github.com/Rhynade/Dashboard">Code</a>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <div class="proj-description">
+            <h3>Background</h3>
+            <p>A local dessert cafe is interested in expanding to another location. Can we help them find a suitable location?</p>
+          </div>
+        </div>
+        <div class="eight columns">
+          <iframe src="https://rhynade.github.io/Dashboard/index.html" height="400" width="600" ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
