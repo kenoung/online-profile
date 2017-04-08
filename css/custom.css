@@ -9,6 +9,17 @@ html, body {
   margin: 0 1rem 1rem 1rem;
 }
 
+img {
+  opacity: 0.8;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+
+.hideme {
+  opacity:0;
+}
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .footer {
@@ -32,7 +43,7 @@ html, body {
 }
 
 .section-heading {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 2rem 2rem;
 }
 
 /* Intro
@@ -43,15 +54,14 @@ html, body {
 
 /* Work
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.work {
-  background-color: #2b2b2b;
+/*.work {
+  background-color: black;
   color: white;
-}
+}*/
 
 .datetime {
   padding-top: 5rem;
   font-size: 2rem;
-  text-align: left;
 }
 
 .job-description {
@@ -63,9 +73,35 @@ html, body {
   display: inline;
 }
 
+.job-description .button-white {
+  background-color: white;
+  color: black;
+}
+
 .workplace {
   display: inline-block
 }
 
 /* Projects
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.proj-title {
+  padding: 2rem 0rem;
+  text-align: left;
+}
+
+.proj-title h3 {
+  display: inline;
+}
+
+.proj-description {
+  text-align: left;
+}
+
+.proj-button {
+  text-align: center;
+}
+
+.proj-image {
+  padding: 2em 1em;
+}
+
