@@ -27,7 +27,7 @@ html, body {
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
-  height: 100%;
+  min-height: 100%;
   text-align: center;
 }
 
@@ -55,7 +55,7 @@ html, body {
 }
 
 .job-description {
-  padding: 4rem 7rem;
+  padding-top: 4rem;
   text-align: left;
 }
 
