@@ -9,12 +9,18 @@ html, body {
   margin: 0 1rem 1rem 1rem;
 }
 
-img {
+.img-clickable:hover {
+  opacity: 1.0;
+}
+
+.img-clickable {
   opacity: 0.8;
 }
 
-img:hover {
-  opacity: 1.0;
+.img-profile {
+  padding: 1em 1em;
+  border-radius: 50%;
+  max-width: 200px;
 }
 
 .hideme {
@@ -49,7 +55,7 @@ img:hover {
 /* Intro
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .description {
-  padding-top: 40%;
+  padding-top: 15%;
 }
 
 /* Work
@@ -60,17 +66,21 @@ img:hover {
 }*/
 
 .datetime {
-  padding-top: 5rem;
+  padding-top: 3rem;
   font-size: 2rem;
 }
 
 .job-description {
-  padding-top: 4rem;
+  padding-top: 2rem;
   text-align: left;
 }
 
 .job-description h2 {
   display: inline;
+}
+
+.job-image {
+  padding: 2em 1em;
 }
 
 .job-description .button-white {
