@@ -72,18 +72,18 @@ html, body {
   }
 }
 
-.job-description {
-  text-align: left;
-}
-
 .job-description h2 {
   display: inline;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 600px) {
   .job-image {
     padding: 2em 1em;
     height: auto;
+  }
+
+  .job-description {
+    text-align: left;
   }
 }
 
