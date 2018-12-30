@@ -74,7 +74,7 @@ let styles = {
     family: 'Avenir',
     size: 20,
     leading: 50,
-    weight: 100
+    weight: 300
 };
 
 let msg = two.makeText("happy birthday tiara!", 0, cakeBase.height, styles);
@@ -83,9 +83,9 @@ let longstyles = {
     family: 'Avenir',
     size: 5,
     leading: 5,
-    weight: 100
+    weight: 300
 };
-let longMsg = two.makeGroup(two.makeText("it's been great knowing you for the past one-and-a-half yea", 0, cakeBase.height+20, longstyles),
+let longMsg = two.makeGroup(two.makeText("it's been great knowing you for the past one-and-a-half year", 0, cakeBase.height+20, longstyles),
     two.makeText("and i'm really grateful to have gotten to know such an amazing person.", 0, cakeBase.height+30, longstyles),
     two.makeText("not only are you super pretty, you're also super smart and talented.", 0, cakeBase.height+40, longstyles),
     two.makeText("i hope you have an amazing birthday and all the best for the coming year!!", 0, cakeBase.height+50, longstyles),
@@ -110,7 +110,7 @@ cakeBase.opacity = 0.75;
 let candles = two.makeGroup(candlesArr);
 
 let group = two.makeGroup(cakeBase, cakeBaseA, makeSprinkles(40), candles, msg, longMsg);
-group.translation.set(two.width / 2, two.height / 2 + 50);
+group.translation.set(two.width / 2, two.height / 2 - 100);
 group.scale = 4.5;
 
 
