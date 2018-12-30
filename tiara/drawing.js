@@ -1,6 +1,6 @@
 // Make an instance of two and place it on the page.
 let elem = document.getElementById('draw-shapes');
-var params = { width: window.innerWidth, height: 400 };
+var params = { fullscreen: true };
 let two = new Two(params).appendTo(elem);
 
 // two has convenience methods to create shapes.
@@ -45,7 +45,7 @@ var gradRad = two.makeRadialGradient(
     0,
     1.5,
     2,
-    new Two.Stop(0, "orange", 1),
+    new Two.Stop(0, "yellow", 1),
     new Two.Stop(1, "red", 1),
 );
 for (let i=0; i<5; i++) {
@@ -76,7 +76,21 @@ let styles = {
     leading: 50,
     weight: 100
 };
+
 let msg = two.makeText("happy birthday tiara!", 0, cakeBase.height, styles);
+
+let longstyles = {
+    family: 'Avenir',
+    size: 5,
+    leading: 5,
+    weight: 100
+};
+let longMsg = two.makeGroup(two.makeText("it's been great knowing you for the past one-and-a-half yea", 0, cakeBase.height+20, longstyles),
+    two.makeText("and i'm really grateful to have gotten to know such an amazing person.", 0, cakeBase.height+30, longstyles),
+    two.makeText("not only are you super pretty, you're also super smart and talented.", 0, cakeBase.height+40, longstyles),
+    two.makeText("i hope you have an amazing birthday and all the best for the coming year!!", 0, cakeBase.height+50, longstyles),
+    two.makeText("- ken", 0, cakeBase.height+60, longstyles));
+
 
 let leftStop = new Two.Stop(0, rainbow(100, 0), 1);
 let rightStop = new Two.Stop(1, rainbow(100, 50), 1);
@@ -95,10 +109,9 @@ cakeBase.opacity = 0.75;
 
 let candles = two.makeGroup(candlesArr);
 
-
-let group = two.makeGroup(cakeBase, cakeBaseA, makeSprinkles(40), candles, msg);
+let group = two.makeGroup(cakeBase, cakeBaseA, makeSprinkles(40), candles, msg, longMsg);
 group.translation.set(two.width / 2, two.height / 2 + 50);
-group.scale = 3;
+group.scale = 4.5;
 
 
 // Don't forget to tell two to render everything
@@ -125,7 +138,7 @@ two.bind('update', function(frameCount) {
       rightDir *= -1
   }
   rightC += rightDir*1;
-  leftC += leftDir*3;
+  leftC += leftDir*2;
 
   leftStop.color = rainbow(limit, leftC);
   rightStop.color = rainbow(limit, rightC);
