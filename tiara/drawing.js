@@ -1,6 +1,6 @@
 // Make an instance of two and place it on the page.
 let elem = document.getElementById('draw-shapes');
-let params = { fullscreen: true };
+var params = { width: window.innerWidth, height: 400 };
 let two = new Two(params).appendTo(elem);
 
 // two has convenience methods to create shapes.
@@ -71,12 +71,24 @@ for (let i=0; i<5; i++) {
 }
 
 let styles = {
-    family: 'proxima-nova, sans-serif',
+    family: 'Avenir',
     size: 20,
     leading: 50,
     weight: 100
 };
 let msg = two.makeText("happy birthday tiara!", 0, cakeBase.height, styles);
+
+let leftStop = new Two.Stop(0, rainbow(100, 0), 1);
+let rightStop = new Two.Stop(1, rainbow(100, 50), 1);
+let msgFill = two.makeLinearGradient(
+  -100,
+  50,
+  100,
+  -50,
+  leftStop,
+  rightStop,
+);
+msg.fill = msgFill;
 
 cakeBase.fill = 'rgb(0, 200, 255)';
 cakeBase.opacity = 0.75;
@@ -86,12 +98,17 @@ let candles = two.makeGroup(candlesArr);
 
 let group = two.makeGroup(cakeBase, cakeBaseA, makeSprinkles(40), candles, msg);
 group.translation.set(two.width / 2, two.height / 2 + 50);
-group.scale = 4;
+group.scale = 3;
 
 
 // Don't forget to tell two to render everything
 // to the screen
 let dir = 1;
+let leftC = 1;
+let leftDir = 1;
+let rightC = 1;
+let rightDir = 1;
+
 two.bind('update', function(frameCount) {
   // This code is called everytime two.update() is called.
   // Effectively 60 times per second.
@@ -99,6 +116,18 @@ two.bind('update', function(frameCount) {
   if (gradRad.radius > 3 || gradRad.radius < 1) {
       dir = -dir;
   }
-  candles.height
+
+  let limit = 1000;
+  if (leftC >= limit || leftC <= 0) {
+      leftDir *= -1
+  }
+  if (rightC >= limit || rightC <= 0) {
+      rightDir *= -1
+  }
+  rightC += rightDir*1;
+  leftC += leftDir*3;
+
+  leftStop.color = rainbow(limit, leftC);
+  rightStop.color = rainbow(limit, rightC);
 
 }).play();
